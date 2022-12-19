@@ -1,0 +1,230 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+#imagem {
+  display: block;
+  border-radius: 50%;
+  margin: 15px;
+  width: 130px;
+  height: 130px;
+}
+
+body {
+  background: linear-gradient(rgba(17, 17, 17, 0.8), rgb(65, 59, 59)),
+    url(img/barbearia-Old-School.png);
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-position-y: 0px;
+  background-repeat: no-repeat;
+}
+
+.conteudo {
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  min-width: 150px;
+  max-width: 800px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.993);
+}
+
+#inicio {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.993);
+  border-radius: 3px;
+  padding-top: 40px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+}
+
+#inicio nav > ul a {
+  display: inline-block;
+  cursor: pointer;
+
+  color: rgba(255, 255, 255, 0.774);
+  font-size: 20px;
+  text-decoration: none;
+
+  padding: 1em;
+  text-decoration: none;
+
+  position: relative;
+  font-weight: bold;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  z-index: -1;
+  background-color: rgba(255, 228, 196, 0.801);
+  transition: height 0.25s linear;
+  border-radius: 8px;
+}
+
+a:hover::before {
+  height: 90%;
+}
+
+#conteudo-dois > h1 {
+  color: rgba(255, 255, 255, 0.774);
+  text-align: center;
+  font-size: 3em;
+}
+
+#conteudo-dois > h2 {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.774);
+}
+
+#conteudo-tres {
+  margin: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.603);
+}
+
+#conteudo-tres > h3 {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.774);
+  padding: 20px;
+  font-size: 1.5em;
+}
+
+#conteudo-tres p {
+  color: rgb(190, 186, 186);
+  font-size: 1.1em;
+}
+
+#conteudo-quatro {
+  color: rgb(190, 186, 186);
+  font-size: 1.1em;
+  text-align: justify;
+}
+
+#conteudo-cinco {
+  overflow-x: auto;
+  padding-top: 40px;
+  font-size: 1.1em;
+}
+
+#btn {
+  display: block;
+  text-align: center;
+  font-size: 1.2em;
+  border: 0px;
+  width: 50%;
+  height: 40px;
+  margin: auto;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.774);
+  border-radius: 8px;
+}
+
+#btn:hover {
+  background-color: rgba(255, 228, 196, 0.801);
+  color: rgba(255, 255, 255, 0.774);
+  transition-duration: 0.5s;
+}
+
+table {
+  width: 500px;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+caption {
+  border-radius: 8px 8px 0px 0px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: rgba(128, 128, 128, 0.466);
+}
+
+td,
+th {
+  border: 1px solid black;
+  padding: 4px;
+}
+
+thead tr th {
+  background-color: rgba(255, 255, 255, 0.432);
+  color: black;
+}
+
+thead tr th {
+  position: sticky;
+  top: -1px;
+}
+
+tbody tr {
+  color: rgb(190, 186, 186);
+}
+
+#rodape {
+  padding-top: 20px;
+}
+
+footer {
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(65, 59, 59));
+  padding: 5px;
+}
+
+#rodape a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.699);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  ul {
+    flex-grow: 1;
+    justify-content: space-around;
+  }
+  table {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  #imagem {
+    margin: auto;
+  }
+
+  table {
+    width: 180px;
+  }
+  #btn {
+    height: 45px;
+  }
+
+  #conteudo-dois > h1 {
+    font-size: 2em;
+  }
+}
